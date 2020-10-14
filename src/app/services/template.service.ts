@@ -21,7 +21,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
               cssClass: 'my-custom-class',
               header: 'Mensagem',
               subHeader: '',
-              message: 'Cadastrado com sucesso',
+              message: texto,
               buttons: ['OK']
             });
             alert.then(data=>{

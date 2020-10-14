@@ -11,6 +11,9 @@ import { TemplateService } from '../services/template.service';
 })
 export class LoginPage implements OnInit {
 
+  //admin2@admin.com
+  //123456
+
   formGroup: FormGroup;
 
   constructor(private formBuilder : FormBuilder,  
@@ -23,6 +26,7 @@ export class LoginPage implements OnInit {
      }
 
   ngOnInit() {
+    this.menuCtrl.enable(false);
   }
 
   autenticar() {  

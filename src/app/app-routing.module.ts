@@ -20,11 +20,15 @@ import {AngularFireAuthGuard, redirectUnauthorizedTo} from '@angular/fire/auth-g
   },
   {
     path: 'clientes',
-    loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule)
+    loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule),
+    canActivate: [AngularFireAuthGuard],
+    data: {authGuardPiipe : redirectToLogin}
   },
   {
     path: 'clientes-novo',
-    loadChildren: () => import('./clientes-novo/clientes-novo.module').then( m => m.ClientesNovoPageModule)
+    loadChildren: () => import('./clientes-novo/clientes-novo.module').then( m => m.ClientesNovoPageModule),
+    canActivate: [AngularFireAuthGuard],
+    data: {authGuardPipe : redirectToLogin}
   },
   {
     path: 'sair',
